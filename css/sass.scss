@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+$blue: #2c7dfa;
+$blue-shade: #3685ff;
+$dark-navy: #1f314f;
+$grey: #7d889e;
+$light-grey: #d5e1ef;
+$white: #ffffff;
+
+@mixin outfit($weight, $size, $color) {
+  font-family: 'Outfit', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: $weight;
+  font-style: normal;
+  font-size: $size;
+  color: $color;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  width: 100vw;
+  background-color: $light-grey;
+  text-align: center;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  @include outfit(700, 22px, $dark-navy);
+}
+
+p {
+  @include outfit(400, 15px, $grey);
+}
+
+.card-container {
+  flex: 1;
+  display: flex;
+  padding: 2rem;
+}
+
+.card {
+  width: 320px;
+  min-height: 500px;
+  max-height: 500px;
+  background-color: $white;
+  border-radius: 20px;
+  margin: auto;
+}
+
+.code {
+  width: 288px;
+  height: 288px;
+  border-radius: 10px;
+  margin-top: 16px;
+}
+
+.text {
+  padding: 16px 32px;
+}
+.attribution {
+  font-size: 11px;
+  flex-shrink: 0;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 1200px) {
+}
+@media screen and (max-width: 1024px) {
+}
+@media screen and (max-width: 768px) {
+}
+@media screen and (max-width: 480px) {
+}
+@media screen and (max-width: 320px) {
+}
